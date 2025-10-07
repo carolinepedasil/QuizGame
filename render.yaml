@@ -10,7 +10,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: CLIENT_ORIGIN
-        value: https://quiz-game-server-y116.onrender.com
+        value: https://quiz-game-client-92o5.onrender.com
 
   - type: web
     name: quiz-game-client
@@ -20,4 +20,4 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_SERVER_URL
-        value: https://quiz-game-client-92o5.onrender.com
+        value: https://quiz-game-server-y116.onrender.com
