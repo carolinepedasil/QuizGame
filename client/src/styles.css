@@ -1,0 +1,36 @@
+:root{
+  --bg: radial-gradient(1200px 800px at 10% 10%, #4f46e5 0%, transparent 60%),
+        radial-gradient(1000px 700px at 90% 10%, #06b6d4 0%, transparent 60%),
+        #0b1020;
+  --card: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.12);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #22d3ee;
+  --primary-contrast: #0b1020;
+  --success: #34d399;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin:0; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+.header { display:flex; align-items:center; justify-content:space-between; margin-bottom: 18px; }
+.title { font-size: 28px; font-weight: 800; letter-spacing: 0.3px; }
+.status { font-size: 14px; color: var(--muted); }
+.grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 900px){ .grid { grid-template-columns: 2fr 1fr; } }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; backdrop-filter: blur(6px); }
+.card h2 { margin: 0 0 8px; font-size: 18px; }
+.btn { padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); background: transparent; color: var(--text); cursor: pointer; transition: transform .05s ease, background .2s ease; }
+.btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.04); }
+.btn.primary { background: var(--primary); color: var(--primary-contrast); border-color: transparent; font-weight: 700; }
+.btn.success { background: var(--success); color: #0b1020; border-color: transparent; font-weight: 700; }
+.input { padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--text); }
+.stack { display:flex; gap: 10px; flex-wrap: wrap; align-items:center; }
+.muted { color: var(--muted); font-size: 14px; }
+.progress { height: 8px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; margin: 10px 0 0; }
+.progress > div { height: 100%; background: linear-gradient(90deg, #22d3ee, #60a5fa); transition: width .25s linear; }
+.leader-row { display:flex; justify-content: space-between; padding: 8px 10px; border-bottom: 1px dashed var(--border); }
+.leader-row:last-child { border-bottom: none; }
+.badge { font-size:12px; padding:2px 8px; border:1px solid var(--border); border-radius:999px; color: var(--muted); }
+.footer { margin-top: 14px; display:flex; justify-content: space-between; align-items:center; }
